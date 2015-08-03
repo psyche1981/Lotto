@@ -2,10 +2,16 @@
 #include <random>
 #include <ctime>
 #include <map>
-const int NUM_BALLS = 49;
+static int NUM_BALLS = 0;
 
 int main(int argc, char** argv)
 {
+	std::cout << "How many balls do you want to draw?" << std::endl;
+	int numBallsToDraw = 0;
+	std::cin >> numBallsToDraw;
+	std::cout << "How many balls do you want to be in the hat?" << std::endl;
+	std::cin >> NUM_BALLS;
+
 	std::map<int, int> ballFreqs;
 	for (int i = 1; i < NUM_BALLS + 1; i++)
 	{
@@ -13,7 +19,7 @@ int main(int argc, char** argv)
 	}
 
 	int ballPick = 0;
-	std::mt19937 randEngine(time(nullptr));
+	std::mt19937 randEngine((unsigned int)time(nullptr));
 	std::uniform_int_distribution<int> randRoll(1, NUM_BALLS);
 
 	int counter = 0;
@@ -30,7 +36,7 @@ int main(int argc, char** argv)
 	counter = 0;
 
 	std::cout << "This Weeks Balls Are Going To Be: " << std::endl << std::endl;;
-	while (counter < 6)
+	while (counter < numBallsToDraw)
 	{
 		for (auto& it = ballFreqs.begin(); it != ballFreqs.end(); it++)
 		{
