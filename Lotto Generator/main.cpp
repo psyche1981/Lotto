@@ -24,6 +24,11 @@ int main(int argc, char** argv)
 		std::cout << "How many balls do you want to be in the hat?" << std::endl;
 		std::cin >> NUM_BALLS;
 	}
+	else
+	{
+		NUM_BALLS_TO_DRAW = 6;
+		NUM_BALLS = 49;
+	}
 
 	
 
