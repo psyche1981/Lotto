@@ -30,8 +30,6 @@ int main(int argc, char** argv)
 		NUM_BALLS = 49;
 	}
 
-	
-
 	std::map<int, int> ballFreqs;
 	for (int i = 1; i < NUM_BALLS + 1; i++)
 	{

@@ -83,4 +83,11 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <ItemGroup>
+    <ResourceCompile Include="icon.rc">
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="lotto_icon.ico" />
+  </ItemGroup>
 </Project>
